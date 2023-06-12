@@ -1,0 +1,546 @@
+@use './mixins.scss';
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Wix Madefor Text', sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 10px 3%;
+}
+
+.navbar{
+		&__logo{
+		width: 70px;
+		@include mixins.phone {
+			width: 50px;
+		}
+	}
+	&__link{
+		font-size: 18px;
+		color:#080808;
+		margin-left: 40px;
+		text-decoration: none; 
+		&:hover{
+		color: #A42A04;
+		}
+	
+			@include mixins.phone {
+				font-size: 14px;
+				margin-left: 8px;
+							
+			}
+			@include mixins.tablet {
+				font-size: 16px;
+				margin-left: 20px;					
+			}
+	  }	
+	}
+
+
+
+#home-section{
+  min-height: 100vh;
+  background:#F4F4F4;
+}
+
+.home{ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+	@include mixins.phone {
+		flex-direction: column;
+		margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+	}
+
+	@include mixins.tablet {
+		flex-direction: column;
+		margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+	}
+	
+	
+  &__text{
+		&__heading{
+			font-size: 40px; 
+			margin-top: 100px;	
+			&--red{
+				color: #A42A04;
+			}
+			@include mixins.desktop {
+				font-size: 60px; 
+				margin-top: 200px;	
+			}
+			@include mixins.laptop{
+				margin-top: 200px;	
+			}
+			@include mixins.landscape-tablet{
+				margin-top: 200px;	
+			}
+			
+		}
+		&__subheading{
+			margin-top: 2px;
+			font-size: 20px;
+			display: flex;
+			justify-content: center;
+
+			@include mixins.desktop {
+				font-size: 30px;
+			}
+			@include mixins.laptop{
+				font-size: 25px; 
+			}
+		}
+	}
+	&__image{
+		&__img{
+			margin-top: 40px;
+			width: 300px;
+			height: 190px;
+			border-radius: 6px;
+
+			@include mixins.landscape-tablet {
+				margin-top: 180px;
+				width: 330px;
+				height: 210px;
+				border-radius: 6px;
+			}
+			@include mixins.laptop{
+				margin-top: 180px;
+				width: 380px;
+				height: 250px;
+				border-radius: 8px;
+			}
+			@include mixins.desktop{
+				margin-top: 150px;
+			 width: 450px;
+			 height: 300px;
+			 border-radius: 10px;
+			}
+			
+		 }
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		
+		&_btn {
+			display: inline-block;	
+			margin-top: 40px;
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 3px;
+			text-decoration: none;
+			background-color: #000000;
+			color: white;
+			font-size: 17px;
+			&:hover{
+				background-color: #A42A04;
+				color: white;
+			}
+			@include mixins.phone {
+				margin-top: 40px;
+				padding: 10px 20px;
+				border-radius: 3px;
+				font-size: 14px;
+			}
+			@include mixins.tablet {
+				 margin-top: 40px;
+					padding: 10px 20px;
+					border-radius: 3px;
+					font-size: 16px;
+			}
+			@include mixins.desktop {
+				margin-top: 50px;
+				padding: 14px 30px;
+				border-radius: 5px;
+				font-size: 18px;	
+			}	
+		}			
+	}
+}
+
+
+ 
+
+
+
+/* -----------about----------- */
+
+
+.about{
+		min-height: 100vh;
+		background: #fff;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding: 10px 10px;
+
+  @include mixins.desktop {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 20px;
+		margin-left: 50px;
+		margin-right: 50px;
+		padding: 20px 40px;	
+
+	}	
+
+	@include mixins.laptop {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 40px;
+		margin-left: 50px;
+		margin-right: 50px;
+		padding: 20px 40px;
+	}
+
+	&__text{
+		&__heading{
+			font-size: 30px;  
+		  margin-top: 35px;
+			text-align: center;
+			color: #A42A04;
+			@include mixins.desktop {
+				font-size: 40px; 
+			}
+			@include mixins.laptop{
+				font-size: 40px; 
+				margin-top: 100px;	
+			}
+			@include mixins.landscape-tablet{
+				font-size: 35px; 
+				margin-top: 35px;	
+			}
+		
+		}
+		&__subheading{
+			margin-top: 20px;
+			font-size: 16px;
+			padding-left: 50px;
+			padding-right: 50px;
+			color: #080808;
+			text-align: justify;
+
+			@include mixins.laptop {
+				font-size: 19px;
+			}
+			@include mixins.desktop {
+				font-size: 20px;
+			}
+
+		}
+	}
+	&__image{
+		&__photo{
+			margin-top: 40px;
+			width: 150px;
+			height: 200px;
+			align-items: center;
+
+			@include mixins.landscape-tablet {
+				margin-top: 50px;
+				width: 200px;
+				height: 250px;
+			}
+
+			@include mixins.laptop {
+				margin-top: 160px;
+				margin-left: 60px;
+				width: 220px;
+				height: 280px;
+			}
+
+			@include mixins.desktop {
+				margin-top: 150px;
+				margin-left: 80px;
+				width: 260px;
+				height: 300px;
+			}
+		 }
+	}
+}
+
+
+
+ /* -----skills */
+
+.skills{
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	padding-bottom: 50px;
+
+	&__heading{
+		font-size: 40px;  
+		margin-top: 120px;
+		margin-bottom: 40px;
+		padding: 10px 30px;
+		text-align: center;
+		color: #fff;
+		@include mixins.phone {
+		  font-size: 30px;  
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+		@include mixins.tablet {
+		  font-size: 30px;  
+			margin-top: 80px;
+			margin-bottom: 20px;
+		}
+		@include mixins.landscape-tablet {
+		  font-size: 32px;  
+			margin-top: 80px;
+			margin-bottom: 20px;
+		}
+		@include mixins.laptop {
+		  font-size: 35px;  
+			margin-bottom: 10px;
+		}
+	}
+	&__list{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-left: 60px;
+		padding-right: 60px;
+		&__item{
+			margin: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&__text{
+				margin-top: 20px;
+				font-size: 30px;
+				padding-bottom: 20px;
+				padding-right: 30px;
+				padding-left: 30px;
+				color: #fff;
+				@include mixins.phone {
+					font-size: 20px;  
+					margin-top: 15px;
+				}
+				@include mixins.tablet {
+					font-size: 22px;  
+					margin-top: 18px;
+				}
+				@include mixins.landscape-tablet {
+					font-size: 22px;  
+				}
+				@include mixins.laptop {
+					font-size: 25px;  
+				}
+			}
+		}
+	}
+}
+
+.projects {
+  background: #F4F4F4;
+  padding: 50px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	&__heading {
+		text-align: center;
+		color: #A42A04;
+		font-size: 40px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include mixins.phone {
+		  font-size: 30px;  
+			padding-top: 20px;
+		  padding-bottom: 20px;
+		}
+		@include mixins.tablet {
+			font-size: 30px;  
+			padding-top: 20px;
+		  padding-bottom: 20px;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		&__item {
+			padding-bottom: 30px;
+			border-radius: 20px;
+			margin: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+			max-width: 500px;
+			 @include mixins.desktop {
+				padding-bottom: 50px;
+			 }	
+			&__info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: nowrap;
+				padding: 20px;
+			}
+			&__image {
+				width: 450px;
+				height: 400px;
+				border-radius: 10px;	
+				@include mixins.phone {
+				 width: 300px;
+				 height: 280px;
+				}	
+				@include mixins.tablet {
+					width: 320px;
+					height: 300px;
+				 }	
+				 @include mixins.landscape-tablet {
+					width: 350px;
+					height: 320px;
+				 }	
+				 @include mixins.laptop {
+					width: 400px;
+					height: 370px;
+				 }	
+			}
+			&__name{
+				margin: 20px;
+				font-size: 18px;
+				padding-bottom: 10px;
+				@include mixins.laptop {
+					font-size: 20px;
+				 }	
+				 @include mixins.desktop {
+					font-size: 20px;
+				 }	
+				
+			}
+			&__desc{
+				padding: 10px 50px;
+				font-size: 14px;
+				@include mixins.laptop {
+					font-size: 16px;
+				 }	
+				 @include mixins.desktop {
+					font-size: 16px;				
+				 }	
+			
+			}
+		}
+	}
+
+}
+
+.contact{
+	min-width:100%;
+	max-height: 150px;
+	padding: 20px 10%;
+	background-color: white;
+	display:flex;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+	@include mixins.phone {
+		max-height: 50px;
+	  padding: 10px 5%;
+	 }	
+
+	&__heading{
+		color: #A42A04;
+		margin-bottom: 20px;	
+	}
+	
+
+	&__email {
+		margin-bottom: 10px;
+		
+		&__link {
+			text-decoration: none;
+			font-size: 18px;
+			color: #080808;
+			@include mixins.phone {
+				font-size: 14px;
+			 }	
+			 @include mixins.tablet {
+				font-size: 15px;
+			 }	
+			 @include mixins.landscape-tablet {
+				font-size: 16px;
+			 }	
+		}
+	}
+
+	&__links{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		margin-bottom: 20px;
+
+		&__item{
+			color:#080808;
+			align-items: center;
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+	&__info{
+		padding-bottom: 20px;
+	  align-items: center;	
+		@include mixins.phone {
+			font-size: 14px;
+		 }	
+		 @include mixins.tablet {
+			font-size: 15px;
+		 }
+		 @include mixins.landscape-tablet {
+			font-size: 16px;
+		 }	
+	}
+}
+
+	
+ 
+	
+	
+ 
+	
+	
+	
+	
+	
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+@use './partials/theme' as theme;
+
+
+@mixin phone {
+  @media only screen and (max-width: theme.$sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: (theme.$sm + 1px)) and (max-width: theme.$md) {
+    @content;
+  }
+}
+
+@mixin landscape-tablet {
+  @media only screen and (min-width: (theme.$md + 1px)) and (max-width: theme.$lg) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: (theme.$lg + 1px)) and (max-width: theme.$xl) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: (theme.$xl + 1px)) {
+    @content;
+  }
+}
+
