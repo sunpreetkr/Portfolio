@@ -13,17 +13,41 @@
 src="https://kit.fontawesome.com/24b9b1a07c.js"
 crossorigin="anonymous"
 ></script>
+<script defer src="./script.js"></script>
 
 </head>
 <body> 
   <header class="header">
     <img src="images/logo.png" class="navbar__logo" alt="logo">
       <nav class="navbar" id="myTopnav"> 
-        <a href="#home-section" class="navbar__link" class="navbar__active">Home</a>
-        <a href="#about-section" class="navbar__link">About</a>
-        <a href="#skills" class="navbar__link">Skills</a>
-        <a href="#projects" class="navbar__link">My Work</a>
-        <a href="#contact" class="navbar__link">Contact</a>
+        <span class="navbar__toggle__bar"></span>
+        <span class="navbar__toggle__bar"></span>
+        <span class="navbar__toggle__bar"></span>
+        <div class="navbar__links">
+          <ul class="navbar__list" id="nav-list">
+            <li class="navbar__list__item"> <a href="#home-section" class="navbar__link" class="navbar__active">Home</a></li>
+            <li class="navbar__list__item"> <a href="#about-section" class="navbar__link">About</a></li>
+            <li class="navbar__list__item"> <a href="#skills" class="navbar__link">Skills</a></li>
+            <li class="navbar__list__item"><a href="#projects" class="navbar__link">My Work</a></li>
+            <li class="navbar__list__item"> <a href="#contact" class="navbar__link">Contact</a></li>   
+       
+          </ul>
+          <ul class="navbar__list navbar__toggle" id="nav-list-toggle">
+            <li class="navbar__list__item"> <a href="#home-section" class="navbar__link" class="navbar__active">Home</a></li>
+            <li class="navbar__list__item"> <a href="#about-section" class="navbar__link">About</a></li>
+            <li class="navbar__list__item"> <a href="#skills" class="navbar__link">Skills</a></li>
+            <li class="navbar__list__item"><a href="#projects" class="navbar__link">My Work</a></li>
+            <li class="navbar__list__item"> <a href="#contact" class="navbar__link">Contact</a></li>   
+       
+          </ul>
+          <div class="navbar__menu" id="toggle-button" onclick="myFunction()">
+            <div class="navbar__menu__line"></div>
+            <div class="navbar__menu__line"></div>
+            <div class="navbar__menu__line"></div>
+   
+           </div>
+        </div>
+        
       </nav>
   </header> 
     <!-- -------home section------------- -->
@@ -132,54 +156,54 @@ crossorigin="anonymous"
     <div class="projects__list__item">
       <div class="projects__list__item__info">
         <img
-        src= "images/project1.jpg"
+        src= "images/fakeOS.png"
         class="projects__list__item__image"/>
         <h3 class="projects__list__item__name">
-            First Project Title
+            FakeOS
         </h3>
         <div class="projects__list__item__links">
-        <a href=""  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
-        <a href=""  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
+        <a href="https://github.com/sunpreetkr/fakeOS"  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+        <a href="https://fakeos-windows7.netlify.app/"  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
         </div>
       </div>
       <p class="projects__list__item__desc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad natus optio ipsam, voluptatum aliquid impedit quo molestiae officiis pariatur alias inventore illo iure mollitia animi quidem dolor amet voluptatibus fugit!
+        A Fake Windows 7 operating system single page application built using HTML, SCSS, and JavaScript.
       </p>
     </div>
 
     <div class="projects__list__item">
       <div class="projects__list__item__info">
         <img
-        src= "images/project2.jpg"
+        src= "images/morsecode.png"
         class="projects__list__item__image"/>
         <h3 class="projects__list__item__name">
-          Second Project Title
+         Morse Code Translator
       </h3>
       <div class="projects__list__item__links">
-      <a href=""  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
-      <a href=""  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
+      <a href="https://github.com/sunpreetkr/morse-translator"  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+      <a href="https://morse-english-translator.netlify.app/"  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
       </div>
     </div>
     <p class="projects__list__item__desc">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad natus optio ipsam, voluptatum aliquid impedit quo molestiae officiis pariatur alias inventore illo iure mollitia animi quidem dolor amet voluptatibus fugit!
+      A morse code translator built using HTML, SCSS,JavaScript, Jest which translates english text to morse code, and vice versa.
     </p>
     </div>
 
     <div class="projects__list__item">
       <div class="projects__list__item__info">
         <img
-        src= "images/project3.jpg"
+        src= "images/bookquest.png"
         class="projects__list__item__image"/>
         <h3 class="projects__list__item__name">
-          Third Project Title
+          BookQuest
       </h3>
       <div class="projects__list__item__links">
-      <a href=""  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
-      <a href=""  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
+      <a href="https://github.com/sunpreetkr/google-books"  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+      <a href="https://bookquest-google-books.netlify.app/"  target="_blank"><i class="fa-solid fa-circle-play fa-2xl" style="color: #000000; margin-left: 20px;"></i></a>
       </div>
     </div>
     <p class="projects__list__item__desc">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad natus optio ipsam, voluptatum aliquid impedit quo molestiae officiis pariatur alias inventore illo iure mollitia animi quidem dolor amet voluptatibus fugit!
+      A Google Books Search Engine built using React and SCSS. It fetches data from the Google Books API.
     </p>
     </div>
 
@@ -189,7 +213,7 @@ crossorigin="anonymous"
         src= "images/project4.jpg"
         class="projects__list__item__image"/>
         <h3 class="projects__list__item__name">
-          Fourth Project Title
+          E-commerce
       </h3>
       <div class="projects__list__item__links">
       <a href=""  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
@@ -197,7 +221,25 @@ crossorigin="anonymous"
       </div>
     </div>
     <p class="projects__list__item__desc">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad natus optio ipsam, voluptatum aliquid impedit quo molestiae officiis pariatur alias inventore illo iure mollitia animi quidem dolor amet voluptatibus fugit!
+      A demo e-commerce site built using React, SCSS and Firestore.
+    </p>
+    </div>
+
+
+    <div class="projects__list__item">
+      <div class="projects__list__item__info">
+        <img
+        src= "images/mine.png"
+        class="projects__list__item__image"/>
+        <h3 class="projects__list__item__name">
+          Minesweeper
+      </h3>
+      <div class="projects__list__item__links">
+      <a href="https://github.com/sunpreetkr/minesweeper"  target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+      </div>
+    </div>
+    <p class="projects__list__item__desc">
+     A simplified version of the minesweeper game to be played in the java console.
     </p>
     </div>
 
@@ -215,7 +257,7 @@ crossorigin="anonymous"
     </section>
     <section class="contact__links">
       <a href="https://www.linkedin.com/in/sunpreet-kaur-a589b1175/"class="contact__links__item" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-      <a href="https://github.com/sunpreetkaur0403" class="contact__links__item" target="_blank"><i class="fa-brands fa-github-square fa-2x"></i></a>
+      <a href="https://github.com/sunpreetkr" class="contact__links__item" target="_blank"><i class="fa-brands fa-github-square fa-2x"></i></a>
     </section>
     <section class ="contact__info">
       <p>©  2023  Sunpreet Kaur</p>

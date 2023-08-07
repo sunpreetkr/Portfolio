@@ -14,19 +14,55 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: #fff;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: 10px 3%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	padding: 10px 3%;
 }
 
 .navbar{
+	display: flex;
+	justify-content:space-between;
+  align-items: center;
+	
 		&__logo{
 		width: 70px;
 		@include mixins.phone {
 			width: 50px;
 		}
 	}
+  &__list{
+		list-style-type: none;
+		&__item{
+			display: inline-block;
+			padding: 10px;
+		}
+	}
+
+	@include mixins.landscape-tablet{
+		&__toggle{
+			display: none;
+			visibility: hidden;
+			height: 0;
+		}
+	}
+
+	@include mixins.desktop{
+		&__toggle{
+			display: none;
+			visibility: hidden;
+			height: 0;
+		}
+	}
+
+	@include mixins.laptop {
+		&__toggle{
+			display: none;
+			visibility: hidden;
+			height: 0;
+		}
+	}
+	
 	&__link{
 		font-size: 18px;
 		color:#080808;
@@ -35,20 +71,99 @@
 		&:hover{
 		color: #A42A04;
 		}
-	
-			@include mixins.phone {
-				font-size: 14px;
-				margin-left: 8px;
-							
-			}
-			@include mixins.tablet {
-				font-size: 16px;
-				margin-left: 20px;					
-			}
+		&__link.active{
+			display: flex;
+		}
+
+		
 	  }	
+
+		
+		@include mixins.phone {
+			.navbar{
+				flex-direction: column;
+				position: relative;
+				&__list{
+					list-style-type: none;
+					width: 100%;
+					padding-top:30px;
+					margin-left: 10px;
+					text-align: center;
+					display: none;
+					&__item{
+						display: block;		
+					
+					}
+				}
+				&__toggle{
+					display: none;
+				}
+			}
+			&__menu{
+				display: block;
+				position: absolute;
+				right: 40px;
+				top: 20px;
+				&__line{
+					width: 20px;
+					height: 3px;
+					background-color: black;
+					margin-bottom: 4px;
+				
+				}
+			
+
+			}
+			// font-size: 14px;
+			// margin-left: 8px;
+			
+						
+		}
+
+		@include mixins.tablet {
+			.navbar{
+				flex-direction: column;
+				position: relative;
+				&__list{
+					list-style-type: none;
+					width: 100%;
+					padding-top:30px;
+					margin-left: 10px;
+					text-align: center;
+					display: none;
+					&__item{
+						display: block;		
+					
+					}
+					&__toggle{
+						display: none;
+					}
+				}
+			}
+			&__menu{
+				display: block;
+				position: absolute;
+				right: 40px;
+				top: 20px;
+				&__line{
+					width: 20px;
+					height: 3px;
+					background-color: black;
+					margin-bottom: 4px;
+				
+				}
+			
+
+			}
+		
+			
+						
+		}
 	}
 
-
+.active{
+	display: block;
+}
 
 #home-section{
   min-height: 100vh;
@@ -117,6 +232,7 @@
 			width: 300px;
 			height: 190px;
 			border-radius: 6px;
+			margin-bottom: 20px;
 
 			@include mixins.landscape-tablet {
 				margin-top: 180px;
@@ -189,7 +305,7 @@
 
 
 .about{
-		min-height: 100vh;
+	  min-height: 100vh;
 		background: #fff;
 		display: flex;
 		flex-direction: column-reverse;
@@ -399,7 +515,7 @@
 			justify-content: center;
 			align-items: center;
 			flex-wrap: nowrap;
-			max-width: 500px;
+			max-width: 400px;
 			 @include mixins.desktop {
 				padding-bottom: 50px;
 			 }	
@@ -412,24 +528,24 @@
 				padding: 20px;
 			}
 			&__image {
-				width: 450px;
+				width: 350px;
 				height: 400px;
 				border-radius: 10px;	
 				@include mixins.phone {
-				 width: 300px;
-				 height: 280px;
+				 width: 270px;
+				 height: 300px;
 				}	
 				@include mixins.tablet {
-					width: 320px;
+					width: 270px;
 					height: 300px;
 				 }	
 				 @include mixins.landscape-tablet {
-					width: 350px;
+					width: 290px;
 					height: 320px;
 				 }	
 				 @include mixins.laptop {
-					width: 400px;
-					height: 370px;
+					width: 350px;
+					height: 400px;
 				 }	
 			}
 			&__name{
@@ -445,7 +561,7 @@
 				
 			}
 			&__desc{
-				padding: 10px 50px;
+				padding: 10px 40px;
 				font-size: 14px;
 				@include mixins.laptop {
 					font-size: 16px;
